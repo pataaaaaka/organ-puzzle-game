@@ -967,8 +967,8 @@ const TsumTsumPuzzle = () => {
             <button
               onClick={startGame}
               style={{
-                padding: '20px 60px',
-                fontSize: '22px',
+                padding: '20px 70px',
+                fontSize: '20px',
                 fontWeight: 'bold',
                 background: 'linear-gradient(135deg, #FEC163 0%, #DE4313 100%)',
                 color: '#FFF',
