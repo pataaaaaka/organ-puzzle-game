@@ -1,0 +1,26 @@
+{
+  "name": "臓器パズルゲーム",
+  "short_name": "臓器パズル",
+  "description": "60秒のタイムアタック型パズルゲーム！同じ臓器を繋げて消そう",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFE5EC",
+  "theme_color": "#FF6B9D",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "lang": "ja"
+}

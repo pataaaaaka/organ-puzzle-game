@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="canvas192" width="192" height="192"></canvas>
+<canvas id="canvas512" width="512" height="512"></canvas>
+<script>
+function createIcon(canvasId, size) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext('2d');
+  
+  // 背景
+  ctx.fillStyle = '#FFE5EC';
+  ctx.fillRect(0, 0, size, size);
+  
+  // ハート（心臓）を描く
+  ctx.fillStyle = '#FF6B9D';
+  ctx.beginPath();
+  const centerX = size / 2;
+  const centerY = size / 2;
+  const heartSize = size * 0.6;
+  
+  ctx.moveTo(centerX, centerY + heartSize * 0.3);
+  ctx.bezierCurveTo(
+    centerX, centerY,
+    centerX - heartSize * 0.5, centerY - heartSize * 0.3,
+    centerX, centerY - heartSize * 0.5
+  );
+  ctx.bezierCurveTo(
+    centerX + heartSize * 0.5, centerY - heartSize * 0.3,
+    centerX, centerY,
+    centerX, centerY + heartSize * 0.3
+  );
+  ctx.fill();
+  
+  // 画像をダウンロード
+  canvas.toBlob(blob => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'icon-' + size + '.png';
+    a.click();
+  });
+}
+
+createIcon('canvas192', 192);
+createIcon('canvas512', 512);
+</script>
+</body>
+</html>
