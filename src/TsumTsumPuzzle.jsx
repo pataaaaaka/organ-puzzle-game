@@ -968,7 +968,7 @@ const TsumTsumPuzzle = () => {
               onClick={startGame}
               style={{
                 padding: '20px 60px',
-                fontSize: '28px',
+                fontSize: '22px',
                 fontWeight: 'bold',
                 background: 'linear-gradient(135deg, #FEC163 0%, #DE4313 100%)',
                 color: '#FFF',
@@ -984,7 +984,7 @@ const TsumTsumPuzzle = () => {
               onMouseDown={(e) => e.target.style.transform = 'scale(0.95)'}
               onMouseUp={(e) => e.target.style.transform = 'scale(1.05)'}
             >
-              ✨ スタート ✨
+              スタート
             </button>
           )}
         </div>
